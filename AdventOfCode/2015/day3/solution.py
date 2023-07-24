@@ -34,8 +34,13 @@ def part2():
         santa = (0, 0)
         robo = (0, 0)
         for i, c in enumerate(data):
-
-
+            if i % 2 == 0:
+                santa = update(santa, c)
+                houses.add(santa)
+            else:
+                robo = update(robo, c)
+                houses.add(robo)
+        print(len(houses))
 
 
 def main():
